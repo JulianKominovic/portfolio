@@ -1,0 +1,40 @@
+.skills {
+  margin: 0 4vw;
+  padding: 10vh 5vw;
+  min-height: 100vh;
+}
+
+.skills-title {
+  font-weight: 900;
+  line-height: 0.9em;
+  margin-bottom: 4vh;
+  position: relative;
+  z-index: 2;
+
+  font-size: clamp(10px, 6vw, 60px);
+}
+.skills-subtitle {
+  margin-bottom: 4vh;
+
+  font-size: clamp(10px, 2vw, 60px);
+}
+
+.skills-patches {
+  display: flex;
+  gap: 2vw;
+}
+
+.skills-tech {
+  background-color: rgba(255, 255, 255, 0.116);
+  border-radius: 1.6vw;
+  padding: 2vh 0.5vw;
+  box-shadow: -2px -1px 0 0 rgb(59, 169, 212), 2px 1px 0 0 #c9ecf5;
+}
+
+.skills-tech-name {
+  font-size: clamp(10px, 1vw, 100px);
+}
+
+.not-important {
+  opacity: 0.2;
+}

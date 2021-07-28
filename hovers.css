@@ -1,0 +1,30 @@
+.project-title:after {
+  content: url("./assets/svg/iconmonstr-arrow-24.svg");
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  border-radius: 1.6em;
+
+  font-size: clamp(10px, 1vw, 60px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1vh;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--bg-color);
+  transition: width 0.5s, opacity 0.4s;
+}
+
+.project-title:hover:after {
+  width: 120%;
+  opacity: 1;
+  transition: width 0.5s, opacity 0.4s;
+}
+
+.project-image-container img:hover {
+  cursor: zoom-in;
+}
