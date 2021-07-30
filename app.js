@@ -19,8 +19,7 @@ let options = {
 
 const handleParallax = () => {
   let value = window.scrollY;
-  shapesParallax.style.left = value * 0.25 + "px";
-  shapesParallax.style.transform = `rotateX(${value * 0.02}deg)`;
+  shapesParallax.style.left = value * 0.5 + "px";
   mountainParallax.style.top = value * 0.6 + "px";
 };
 

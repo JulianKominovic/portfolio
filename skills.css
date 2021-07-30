@@ -14,18 +14,20 @@
   font-size: clamp(10px, 6vw, 60px);
 }
 .skills-subtitle {
-  margin-bottom: 4vh;
-
+  margin-top: 2vh;
   font-size: clamp(10px, 2vw, 60px);
 }
 
 .skills-patches {
   display: flex;
-  gap: 2vw;
+  row-gap: 0;
+  column-gap: 2vw;
+  flex-wrap: wrap;
 }
 
 .skills-tech {
   background-color: rgba(255, 255, 255, 0.116);
+  width: 10vw;
   border-radius: 1.6vw;
   padding: 2vh 0.5vw;
   box-shadow: -2px -1px 0 0 rgb(59, 169, 212), 2px 1px 0 0 #c9ecf5;

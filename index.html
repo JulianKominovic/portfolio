@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="landing.css" />
     <link rel="stylesheet" href="projects.css" />
     <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="contact.css" />
 
     <link
       rel="preload"
@@ -68,7 +69,7 @@
         <a class="nav__bar-link" href="#home">Inicio</a>
         <a class="nav__bar-link" href="#projects">Proyectos</a>
         <a class="nav__bar-link" href="#skills">Habilidades</a>
-        <a class="nav__bar-link" href="#">Contacto</a>
+        <a class="nav__bar-link" href="#contact">Contacto</a>
       </div>
       <div class="cv-link-container">
         <a class="nav__bar-link-cv" href="#">Descargar CV</a>
@@ -315,6 +316,23 @@
           <p class="tech-name skills-tech-name">Photoshop</p>
         </div>
       </section>
+    </article>
+
+    <article class="contact" id="contact">
+      <form
+        action="https://formsubmit.co/juliankominovic@gmail.com"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        Name:<br />
+        <input type="text" name="name" /><br />
+        E-mail:<br />
+        <input type="text" name="mail" /><br />
+        Comment:<br />
+        <input type="text" name="comment" size="50" /><br /><br />
+        <input type="submit" value="Send" />
+        <input type="reset" value="Reset" />
+      </form>
     </article>
 
     <footer class="credits">
