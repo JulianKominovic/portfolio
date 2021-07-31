@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="projects.css" />
     <link rel="stylesheet" href="skills.css" />
     <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="footer.css" />
 
     <link
       rel="preload"
@@ -66,13 +67,32 @@
     </div>
     <nav class="nav__bar">
       <div class="nav__bar-link-navigation">
-        <a class="nav__bar-link" href="#home">Inicio</a>
+        <a class="nav__bar-link" href="#home">
+          <div>Inicio</div>
+        </a>
         <a class="nav__bar-link" href="#projects">Proyectos</a>
         <a class="nav__bar-link" href="#skills">Habilidades</a>
         <a class="nav__bar-link" href="#contact">Contacto</a>
       </div>
-      <div class="cv-link-container">
+      <button class="cv-link-container">
         <a class="nav__bar-link-cv" href="#">Descargar CV</a>
+      </button>
+      <button class="hamburger-button">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="mobile-navbar">
+        <button class="hamburger-button-open">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="nav__bar-link-navigation mobile-nav">
+          <a class="nav__bar-link" href="#home">Inicio</a>
+          <a class="nav__bar-link" href="#projects">Proyectos</a>
+          <a class="nav__bar-link" href="#skills">Habilidades</a>
+          <a class="nav__bar-link" href="#contact">Contacto</a>
+          <a class="nav__bar-link-cv" href="#">
+            <button class="cv-link-container cv-mobile">Descargar CV</button>
+          </a>
+        </div>
       </div>
     </nav>
     <header class="header" id="home">
@@ -82,22 +102,24 @@
           <h2 class="subtitle">
             Junior Frontend Developer<span class="normal-text">.</span>
           </h2>
-          <a
-            href="http://github.com/JulianKominovic"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link-icon"
-          >
-            <i class="fab fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/jkominovic/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link-icon"
-          >
-            <i class="fab fa-linkedin"></i
-          ></a>
+          <div class="social-icons-link">
+            <a
+              href="http://github.com/JulianKominovic"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link-icon"
+            >
+              <i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jkominovic/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link-icon"
+            >
+              <i class="fab fa-linkedin"></i
+            ></a>
+          </div>
         </div>
       </div>
     </header>
@@ -201,14 +223,34 @@
               rel="noopener noreferrer"
               >Continuar</a
             >
-            <div class="project-one-social">
-              <i class="fab fa-linkedin project-one-first-social"></i>
-              <i class="fab fa-github"></i>
+            <div class="social-icons-link">
+              <a
+                href="http://github.com/JulianKominovic"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link-icon prototype-social-link"
+              >
+                <i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/jkominovic/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link-icon prototype-social-link"
+              >
+                <i class="fab fa-linkedin"></i
+              ></a>
             </div>
             <footer class="project-one-footer">
               Julian Ezequiel Kominovic
             </footer>
           </div>
+          <!-- <img
+            class="space-illustration"
+            src="./assets/svg/pixeltrue-space-discovery.svg"
+            alt="Space illustration"
+            srcset=""
+          /> -->
         </div>
       </section>
     </article>
@@ -319,20 +361,46 @@
     </article>
 
     <article class="contact" id="contact">
-      <form
-        action="https://formsubmit.co/juliankominovic@gmail.com"
-        method="POST"
-        enctype="multipart/form-data"
-      >
-        Name:<br />
-        <input type="text" name="name" /><br />
-        E-mail:<br />
-        <input type="text" name="mail" /><br />
-        Comment:<br />
-        <input type="text" name="comment" size="50" /><br /><br />
-        <input type="submit" value="Send" />
-        <input type="reset" value="Reset" />
-      </form>
+      <div class="contact-text">
+        <h3 class="skills-title contact-title">Contacto</h3>
+        <h4 class="contact-subtitle">¿Como puedo ayudarte?</h4>
+        <p class="contact-desc">
+          Podes contactarme aca abajo, recorda que tenes mi CV en la barra de
+          navegacion y mi Linkedin y Github arriba de todo.
+        </p>
+      </div>
+      <div class="flex-contact">
+        <form method="POST" enctype="multipart/form-data" class="contact-form">
+          <div class="name-field field">
+            <label for="name">Nombre</label>
+            <input class="input" placeholder="Nombre" type="text" name="name" />
+          </div>
+          <div class="email-field field">
+            <label for="name">E-mail</label>
+            <input
+              class="input"
+              placeholder="E-mail"
+              type="email"
+              name="mail"
+            />
+          </div>
+          <div class="comments-field field">
+            <label for="name">Comentario</label>
+            <textarea
+              class="input"
+              type="text"
+              name="comment"
+              size="50"
+              placeholder="Comentame"
+            ></textarea>
+          </div>
+
+          <div class="buttons-field field">
+            <input class="form-button" type="submit" value="Enviar" />
+            <input class="form-button reset" type="reset" value="Borrar" />
+          </div>
+        </form>
+      </div>
     </article>
 
     <footer class="credits">
@@ -340,14 +408,39 @@
         href="https://www.svgbackgrounds.com/#sun-tornado"
         target="_blank"
         rel="noopener noreferrer"
-        >Background made by SvgBackgrounds</a
+        class="bg-credits"
+        >Background decoration made by SvgBackgrounds</a
       >
+      <br />
+      <br />
       <a
-        href="https://loading.io/pattern/rain"
+        href="https://github.com/JulianKominovic/portfolio"
         target="_blank"
         rel="noopener noreferrer"
-        >Rain background is provided by loading.io
-      </a>
+        class="bg-credits"
+        ><b>Source code del portfolio</b></a
+      >
+      <br />
+      <br />
+      <a class="bg-credits">Julian Ezequiel Kominovic</a>
+      <div class="social-icons-link">
+        <a
+          href="http://github.com/JulianKominovic"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link-icon"
+        >
+          <i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/jkominovic/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link-icon"
+        >
+          <i class="fab fa-linkedin"></i
+        ></a>
+      </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
     <script

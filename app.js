@@ -10,6 +10,7 @@ const projectOneLogo = document.querySelector(".project-one-logo");
 const projectOneButton = document.querySelector(".project-one-button");
 const projectOneOpenSlider = document.getElementById("project-one-open-slider");
 const projectOneCarrousel = document.querySelector(".project-carrousel");
+const projectOneSlide = document.querySelector(".project-one-slide");
 
 let options = {
   root: null,
@@ -36,6 +37,27 @@ const observerCallback = (entries, observer) => {
 
 let observer = new IntersectionObserver(observerCallback, options);
 observer.observe(mountainParallax);
+
+//NAV MENU
+const mobileNavBar = document.querySelector(".mobile-navbar");
+const hamburgerButtonClose = document.querySelector(".hamburger-button-open");
+const hamburgerButtonOpen = document.querySelector(".hamburger-button");
+const mobileNavbarItems = document.querySelector(".nav__bar-link-navigation");
+const mobileCvItem = document.querySelector("cv-link-container");
+hamburgerButtonClose.addEventListener("click", () => {
+  mobileNavBar.style.right = "-220vw";
+});
+hamburgerButtonOpen.addEventListener("click", () => {
+  mobileNavBar.style.transition = "ease 0.4s right";
+
+  mobileNavBar.style.right = "-10vw";
+});
+console.log(mobileNavBar.children[1].childNodes);
+mobileNavBar.children[1].childNodes.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileNavBar.style.right = "-220vw";
+  });
+});
 
 // SLIDER PROJECT ONE START
 const sliderProjectOne = document.querySelector(".project-one-slide");
@@ -151,4 +173,116 @@ sliderRight.addEventListener("click", () => {
     refreshSlide();
   }
 });
+
+let initX, endX;
+const handleSlidesSwipe = () => {
+  if (initX - endX > 40) {
+    if (currentPage < projectOneSlides.length) {
+      currentPage++;
+      refreshSlide();
+    }
+  }
+  if (initX - endX < -40) {
+    if (currentPage > 0) {
+      currentPage--;
+      refreshSlide();
+    }
+  }
+};
+
+projectOneSlide.addEventListener("touchstart", (event) => {
+  console.log(event.touches[0].clientX);
+  initX = event.touches[0].clientX;
+});
+projectOneSlide.addEventListener("touchend", (event) => {
+  console.log(event);
+  console.log(event.changedTouches[0].clientX);
+  endX = event.changedTouches[0].clientX;
+  handleSlidesSwipe();
+});
+
 // SLIDER PROJECT ONE END
+
+// EMAIL FORM
+const contactForm = document.querySelector(".contact-form");
+
+const submitSuccess = () => {};
+
+const VERIFICATION_ERRORS = {
+  minLengthName: "El contenido del nombre es muy corto.",
+  minLengthComment: "El contenido del cometario es muy corto.",
+  empty: "Escribe algo...",
+  mailBadFormat: "Escribe bien el email. Ejemplo: usuario@gmail.com",
+  saySomething:
+    "El campo comentarios esta vacio. Contame un poco que andas necesitando.",
+  nameOnlyLetters: "El nombre solo admite letras normales",
+};
+const formVerifyName = (string) => {
+  const textFormat = /^[A-Za-z]+$/;
+  if (string.length < 4) return VERIFICATION_ERRORS.minLengthName;
+
+  if (!string.match(textFormat)) return VERIFICATION_ERRORS.nameOnlyLetters;
+
+  if (string.length === 0 || string.trim() === " ")
+    return VERIFICATION_ERRORS.empty;
+
+  return "";
+};
+
+const formVerifyComments = (string) => {
+  if (string.length < 4) return VERIFICATION_ERRORS.minLengthComment;
+  if (string.length === 0 || string.trim() === " ")
+    return VERIFICATION_ERRORS.saySomething;
+  return "";
+};
+
+const formVerifyEmail = (string) => {
+  const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (string.length < 4) return VERIFICATION_ERRORS.mailBadFormat;
+  if (!string.match(mailFormat)) return VERIFICATION_ERRORS.mailBadFormat;
+  return "";
+};
+
+const runVerification = (event) => {
+  const inputName = event.target[0].value;
+  const inputMail = event.target[1].value;
+  const inputMessage = event.target[2].value;
+
+  let error = "";
+  const stepOne = formVerifyComments(inputMessage);
+  const stepTwo = formVerifyEmail(inputMail);
+  const stepThree = formVerifyName(inputName);
+  if (stepThree !== "") return stepThree;
+  if (stepTwo !== "") return stepTwo;
+  if (stepOne !== "") return stepOne;
+
+  return error;
+};
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const error = runVerification(event);
+  if (error === "") {
+    fetch("https://formsubmit.co/ajax/juliankominovic@gmail.com", {
+      method: "POST",
+      body: JSON.stringify({
+        name: event.target[0].value,
+        mail: event.target[1].value,
+        message: event.target[2].value,
+        _template: "table",
+        _subject: "Mail desde el portfolio!",
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "aplication/json",
+      },
+    })
+      .then(() => {})
+      .catch((e) => console.error(e));
+    console.log("enviado");
+  } else {
+    alert(error);
+  }
+};
+
+contactForm.addEventListener("submit", handleSubmit);

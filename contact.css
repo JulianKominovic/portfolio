@@ -1,4 +1,124 @@
 .contact {
-  min-height: 100vh;
   background-color: #3471eb;
+  padding: 10vh 5vw;
+  position: relative;
+}
+
+.flex-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-top: 2vh;
+  padding: 4vh 4vw;
+  border-radius: 1.6vw;
+  background-color: #ffffffc5;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.308);
+  height: 60vh;
+  width: 30%;
+
+  /* position: absolute;
+  z-index: 2;
+
+  transform: translateX(50%);
+  right: 50%; */
+}
+
+.contact-text {
+  /* position: absolute;
+  z-index: 3;
+  transform: translateX(50%);
+  right: 50%; */
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-title {
+  margin: 1vh;
+}
+
+.contact-desc {
+  font-weight: 300;
+}
+
+label {
+  color: #8d90ab;
+}
+
+.contact-illustration {
+  height: 80vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  margin-top: -8vh;
+}
+
+.form-button {
+  padding: 1vh 2vw;
+  border-radius: 1.6vw;
+  border: none;
+  margin-top: 3vh;
+  display: block;
+  width: 100%;
+  color: var(--font-color);
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1em, 1.6vw, 100px);
+  background-color: rgb(43, 218, 43);
+
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.329);
+
+  background: linear-gradient(
+    to right,
+    rgba(121, 130, 214, 0.493),
+    rgb(67, 85, 250)
+  );
+  cursor: pointer;
+}
+
+.reset {
+  background-color: red;
+}
+
+.buttons-field {
+  width: 100%;
+}
+
+.input {
+  border-radius: 0.3em;
+  padding: 1vh 2vw 1vh 0.6vw;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f9fc;
+  width: 96%;
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1100px) {
+  .flex-contact {
+    flex-direction: column;
+  }
+  .contact-form {
+    width: 80vw;
+  }
 }
