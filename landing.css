@@ -51,17 +51,20 @@
 .title {
   font-size: clamp(3em, 6vw, 200px);
   line-height: 0.8em;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .subtitle {
   font-size: clamp(1.6em, 3vw, 200px);
   color: var(--highlight-color);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .social-link-icon {
   display: inline-block;
   margin: 0 1vw;
   margin-top: 2vh;
+  text-shadow: 0 0 2px white;
 }
 
 .social-link-icon > i {

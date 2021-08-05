@@ -26,7 +26,6 @@ const handleParallax = () => {
 
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
-    console.log(entry.isIntersecting);
     if (entry.isIntersecting) {
       window.addEventListener("scroll", handleParallax);
     } else {
@@ -52,7 +51,7 @@ hamburgerButtonOpen.addEventListener("click", () => {
 
   mobileNavBar.style.right = "-10vw";
 });
-console.log(mobileNavBar.children[1].childNodes);
+
 mobileNavBar.children[1].childNodes.forEach((link) => {
   link.addEventListener("click", () => {
     mobileNavBar.style.right = "-220vw";
@@ -270,7 +269,6 @@ const handleSubmit = (event) => {
     })
       .then(() => {})
       .catch((e) => console.error(e));
-    console.log("enviado");
   } else {
     alert(error);
   }

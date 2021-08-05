@@ -338,6 +338,7 @@ i {
     font-weight: 900;
     line-height: 0.9em;
     margin-bottom: 4vh;
+    margin-top: 2vh;
     position: relative;
     text-align: center;
     font-size: clamp(10px, 6vw, 60px);
@@ -350,7 +351,7 @@ i {
     display: block;
   }
   .project-left-container {
-    height: 60vh;
+    height: 70vh;
   }
   .project-right-container {
     height: 40vh;
