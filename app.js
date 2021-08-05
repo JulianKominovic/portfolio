@@ -83,13 +83,7 @@ srcset=""
 class="img-cover"
 />
 </a>
-<a href="./assets/projects/simple-calendar-winter.png">
-<img
-src="./assets/projects/simple-calendar-winter.png"
-alt="simple calendar verano"
-srcset=""
-class="img-cover"
-/></a>
+
 `,
   `<div class="slide-one">
 <h1 class="project-one-title">Agregando tareas</h1>
@@ -191,12 +185,9 @@ const handleSlidesSwipe = () => {
 };
 
 projectOneSlide.addEventListener("touchstart", (event) => {
-  console.log(event.touches[0].clientX);
   initX = event.touches[0].clientX;
 });
 projectOneSlide.addEventListener("touchend", (event) => {
-  console.log(event);
-  console.log(event.changedTouches[0].clientX);
   endX = event.changedTouches[0].clientX;
   handleSlidesSwipe();
 });

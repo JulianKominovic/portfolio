@@ -112,11 +112,12 @@
   }
   .cv-mobile {
     width: 100%;
-    min-height: 10vh;
+    min-height: 6vh;
     display: block;
     align-self: center;
     cursor: pointer;
     background-color: var(--font-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   .nav__bar-link-cv {
     color: var(--darker-bg-color);
@@ -170,11 +171,12 @@
   }
 
   .nav__bar-link {
-    background-color: rgba(0, 0, 0, 0.109);
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 2vh;
     padding: 2vh 0;
     min-width: 30vw;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .mobile-navbar {
