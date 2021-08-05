@@ -1,14 +1,12 @@
-@media screen and (max-width: 1099px) {
-  .social-link-icon:hover {
-    opacity: 0.3;
-    transition: opacity 0.1s ease;
-  }
+.social-link-icon:hover {
+  opacity: 0.3;
+  transition: opacity 0.1s ease;
+}
 
-  .project-left-container-link:hover {
-    text-decoration: underline;
+.project-left-container-link:hover {
+  text-decoration: underline;
 
-    text-decoration-style: wavy;
-  }
+  text-decoration-style: wavy;
 }
 
 @media screen and (min-width: 1100px) {
