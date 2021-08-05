@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/logo.svg" />
+    <meta
+      name="keywords"
+      content="Julian, Ezequiel, Kominovic, portfolio, junior frontend developer,HTML, CSS, JavaScript"
+    />
+    <meta name="author" content="Julian Ezequiel Kominovic" />
+    <meta
+      name="description"
+      content="Hola, mi nombre es Julian Ezequiel Kominovic. Soy un apasionado por del Fullstack y me encamino a ser uno. Aqui esta mi portfolio."
+    />
+    <title>Julian Ezequiel Kominovic Portfolio</title>
+  </head>
+  <body>
+    <div class="bg-parallax-shapes"></div>
+    <div class="bg-parallax-mountain"></div>
+    <div class="bg-fill-color"></div>
+    <div class="project-one-slide">
+      <div class="project-one-content project-carrousel"></div>
+      <button name="CloseButton" class="project-one-close">
+        <i class="fas fa-times-circle"></i>
+      </button>
+      <button name="MoveToRightButton" class="project-one-right">
+        <i class="fas fa-chevron-circle-right"></i>
+      </button>
+      <button name="MoveToLeftButton" class="project-one-left">
+        <i class="fas fa-chevron-circle-left"></i>
+      </button>
+    </div>
+    <nav class="nav__bar">
+      <div class="nav__bar-link-navigation">
+        <a class="nav__bar-link" href="#home">
+          <div>Inicio</div>
+        </a>
+        <a class="nav__bar-link" href="#projects">Proyectos</a>
+        <a class="nav__bar-link" href="#skills">Habilidades</a>
+        <a class="nav__bar-link" href="#contact">Contacto</a>
+      </div>
+      <button class="cv-link-container">
+        <a
+          class="nav__bar-link-cv"
+          target="_blank"
+          rel="noreferrer noopener"
+          href="./assets/Julian Ezequiel Kominovic - CV2.pdf"
+          >Descargar CV</a
+        >
+      </button>
+      <button class="hamburger-button">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="mobile-navbar">
+        <button class="hamburger-button-open">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="nav__bar-link-navigation mobile-nav">
+          <a class="nav__bar-link" href="#home">Inicio</a>
+          <a class="nav__bar-link" href="#projects">Proyectos</a>
+          <a class="nav__bar-link" href="#skills">Habilidades</a>
+          <a class="nav__bar-link" href="#contact">Contacto</a>
+          <a
+            class="nav__bar-link-cv"
+            target="_blank"
+            rel="noreferrer noopener"
+            href="./assets/Julian Ezequiel Kominovic - CV2.pdf"
+          >
+            <button class="cv-link-container cv-mobile">Descargar CV</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <header class="header" id="home">
+      <div class="header-fixed">
+        <div class="header-presentation">
+          <h1 class="title" id="title">Julian Kominovic</h1>
+          <h2 class="subtitle">
+            Junior Frontend Developer<span class="normal-text">.</span>
+          </h2>
+          <div class="social-icons-link">
+            <a
+              href="http://github.com/JulianKominovic"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link-icon"
+            >
+              <i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jkominovic/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link-icon"
+            >
+              <i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <article class="projects" id="projects">
+      <section class="project-section project-two">
+        <div class="project-left-container">
+          <a
+            href="https://jk-simple-calendar.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-left-container-link"
+            ><h3 class="project-title">Simple Calendar</h3></a
+          >
+
+          <p class="project-desc">
+            Este proyecto es el primero hecho en React. <br /><br />
+            A modo de práctica decidí comenzar un mini proyecto que sea capaz de
+            terminar y pulir.
+            <br />
+            <br />
+            Este calendario simple te proporciona un sistema de guardado para
+            tus tareas diarias sin necesidad de registrarte en ningun lado,
+            asegurando que tus tareas sean 100% privadas.
+            <br />
+            <br />
+            He empleado el paradigma first mobile al desarrollar esta app. Al
+            estar pensada para ser una <b>Progressive Web App</b> fue
+            especificamente adaptada para dichas resoluciones.
+            <br />
+            <br />
+          </p>
+        </div>
+        <div class="project-right-container">
+          <h4 class="project-section-name">Tecnologías</h4>
+          <div class="project-techs">
+            <div class="tech">
+              <i class="fab fa-react"></i>
+              <p class="tech-name">React</p>
+            </div>
+            <div class="tech">
+              <i class="fab fa-js-square"></i>
+              <p class="tech-name">Javascript</p>
+            </div>
+            <div class="tech">
+              <i class="fab fa-css3-alt"></i>
+              <p class="tech-name">CSS</p>
+            </div>
+          </div>
+          <h4 class="project-section-name">Librerías</h4>
+          <div class="project-libs">
+            <div class="tech">
+              <img
+                loading="lazy"
+                class="tech-img"
+                src="./assets/svg/styledcomps.svg"
+                alt="Styled Components logo"
+              />
+              <p class="tech-name">Styled Components</p>
+            </div>
+            <div class="tech">
+              <i class="fas fa-clock"></i>
+              <p class="tech-name">Moment.js</p>
+            </div>
+            <div class="tech">
+              <img
+                loading="lazy"
+                class="tech-img"
+                src="./assets/svg/react-spring-seeklogo.com.svg"
+                alt="Styled Components logo"
+              />
+              <p class="tech-name">React Spring</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-carrousel" id="project-one">
+          <div class="project-text">
+            <div>
+              <p class="project-one-title">Landing</p>
+              <p class="project-desc">
+                El landing page de la app. <br />
+                Simple y con una paleta de colores agradable al ojo. <br />
+              </p>
+            </div>
+            <button class="project-stepbystep" id="project-one-open-slider">
+              <h3 class="project-dropdown">Ver proyecto</h3>
+              <i class="fas fa-caret-right"></i>
+            </button>
+          </div>
+
+          <div class="project-one-landing">
+            <i class="fas fas fa-calendar logo-project-one"></i>
+            <div class="project-one-text">
+              <h5 class="project-one-title-protoype">Simple Calendar</h5>
+              <h5 class="project-one-subtitle">
+                Just a lightweight pocket calendar
+              </h5>
+            </div>
+            <a
+              href="https://jk-simple-calendar.netlify.app/"
+              class="project-one-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Continuar</a
+            >
+            <div class="social-icons-link">
+              <a
+                href="http://github.com/JulianKominovic"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link-icon prototype-social-link"
+              >
+                <i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/jkominovic/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link-icon prototype-social-link"
+              >
+                <i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+            <footer class="project-one-footer">
+              Julian Ezequiel Kominovic
+            </footer>
+          </div>
+          <!-- <img
+            class="space-illustration"
+            src="./assets/svg/pixeltrue-space-discovery.svg"
+            alt="Space illustration"
+            srcset=""
+          /> -->
+        </div>
+      </section>
+    </article>
+
+    <article class="skills" id="skills">
+      <h3 class="skills-title">Habilidades</h3>
+      <h4 class="skills-subtitle">Lenguajes</h4>
+      <section class="skills-patches">
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/javascript-js-seeklogo.com.svg"
+            alt="Styled Components logo"
+          />
+          <p class="tech-name skills-tech-name">Javascript</p>
+        </div>
+        <div class="tech skills-tech">
+          <i class="fab fa-css3-alt"></i>
+          <p class="tech-name skills-tech-name">CSS</p>
+        </div>
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/html5-without-wordmark-color.svg"
+            alt="Html5 logo"
+          />
+          <p class="tech-name skills-tech-name">HTML</p>
+        </div>
+        <!-- <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/c-seeklogo.com.svg"
+            alt="Styled Components logo"
+          />
+          <p class="tech-name skills-tech-name">C</p>
+        </div> -->
+      </section>
+      <h4 class="skills-subtitle">Librerías</h4>
+      <section class="skills-patches">
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/react-seeklogo.com.svg"
+            alt="Styled Components logo"
+          />
+          <p class="tech-name skills-tech-name">React</p>
+        </div>
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/react-spring-seeklogo.com.svg"
+            alt="Styled Components logo"
+          />
+          <p class="tech-name skills-tech-name">React Spring</p>
+        </div>
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/reactrouter-seeklogo.com.svg"
+            alt="Styled Components logo"
+          />
+          <p class="tech-name skills-tech-name">React Router</p>
+        </div>
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/styledcomps.svg"
+            alt="Styled Components logo"
+          />
+          <p class="tech-name skills-tech-name">Styled Components</p>
+        </div>
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/hand-point-up-solid.svg"
+            alt="React swippeable"
+          />
+          <p class="tech-name skills-tech-name">React Swipeable</p>
+        </div>
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/momentjs-seeklogo.com.svg"
+            alt="Styled Components logo"
+          />
+          <p class="tech-name skills-tech-name">Moment.js</p>
+        </div>
+      </section>
+      <h4 class="skills-subtitle">Programas</h4>
+      <section class="skills-patches">
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/figma-seeklogo.com.svg"
+            alt="Styled Components logo"
+          />
+          <p class="tech-name skills-tech-name">Figma</p>
+        </div>
+        <div class="tech skills-tech">
+          <img
+            loading="lazy"
+            class="tech-img"
+            src="./assets/svg/adobe-photoshop-cc-seeklogo.com.svg"
+            alt="Styled Components logo"
+          />
+          <p class="tech-name skills-tech-name">Photoshop</p>
+        </div>
+      </section>
+    </article>
+
+    <article class="contact" id="contact">
+      <div class="contact-text">
+        <h3 class="skills-title contact-title">Contacto</h3>
+        <h4 class="contact-subtitle">¿Cómo puedo ayudarte?</h4>
+        <p class="contact-desc">
+          Podés contactarme acá abajo, recorda que tenes mi CV en la barra de
+          navegación y mi Linkedin y Github más abajo en el footer.
+        </p>
+      </div>
+      <div class="flex-contact">
+        <form method="POST" enctype="multipart/form-data" class="contact-form">
+          <div class="name-field field">
+            <label for="name">Nombre</label>
+            <input class="input" placeholder="Nombre" type="text" name="name" />
+          </div>
+          <div class="email-field field">
+            <label for="name">E-mail</label>
+            <input
+              class="input"
+              placeholder="E-mail"
+              type="email"
+              name="mail"
+            />
+          </div>
+          <div class="comments-field field">
+            <label for="name">Comentario</label>
+            <textarea
+              class="input"
+              type="text"
+              name="comment"
+              size="50"
+              placeholder="Comentame"
+            ></textarea>
+          </div>
+
+          <div class="buttons-field field">
+            <input class="form-button" type="submit" value="Enviar" />
+            <input class="form-button reset" type="reset" value="Borrar" />
+          </div>
+        </form>
+      </div>
+    </article>
+
+    <footer class="credits">
+      <a
+        href="https://www.svgbackgrounds.com/#sun-tornado"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-credits"
+        >Background decoration made by SvgBackgrounds</a
+      >
+      <br />
+      <br />
+      <a
+        href="https://github.com/JulianKominovic/portfolio"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-credits"
+        ><b>Source code del portfolio</b></a
+      >
+      <br />
+      <br />
+      <a class="bg-credits">Julian Ezequiel Kominovic</a>
+      <div class="social-icons-link">
+        <a
+          href="http://github.com/JulianKominovic"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link-icon"
+        >
+          <i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/jkominovic/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link-icon"
+        >
+          <i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <script
+      defer
+      crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"
+    ></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/1bad4afc9a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script async src="index.js"></script>
+  </body>
+</html>
