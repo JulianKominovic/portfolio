@@ -27,9 +27,9 @@ const handleParallax = () => {
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      window.addEventListener("scroll", handleParallax);
+      window.addEventListener("scroll", handleParallax, { passive: true });
     } else {
-      window.removeEventListener("scroll", handleParallax);
+      window.removeEventListener("scroll", handleParallax, { passive: true });
     }
   });
 };
@@ -184,13 +184,21 @@ const handleSlidesSwipe = () => {
   }
 };
 
-projectOneSlide.addEventListener("touchstart", (event) => {
-  initX = event.touches[0].clientX;
-});
-projectOneSlide.addEventListener("touchend", (event) => {
-  endX = event.changedTouches[0].clientX;
-  handleSlidesSwipe();
-});
+projectOneSlide.addEventListener(
+  "touchstart",
+  (event) => {
+    initX = event.touches[0].clientX;
+  },
+  { passive: true }
+);
+projectOneSlide.addEventListener(
+  "touchend",
+  (event) => {
+    endX = event.changedTouches[0].clientX;
+    handleSlidesSwipe();
+  },
+  { passive: true }
+);
 
 // SLIDER PROJECT ONE END
 
