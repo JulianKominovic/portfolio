@@ -169,13 +169,14 @@ sliderRight.addEventListener("click", () => {
 
 let initX, endX;
 const handleSlidesSwipe = () => {
-  if (initX - endX > 40) {
-    if (currentPage < projectOneSlides.length) {
+  const sensivity = 40;
+  if (initX - endX > sensivity) {
+    if (currentPage < projectOneSlides.length - 1) {
       currentPage++;
       refreshSlide();
     }
   }
-  if (initX - endX < -40) {
+  if (initX - endX < -sensivity) {
     if (currentPage > 0) {
       currentPage--;
       refreshSlide();
